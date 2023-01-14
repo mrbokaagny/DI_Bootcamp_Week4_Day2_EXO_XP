@@ -1,0 +1,19 @@
+<div class="cardbtn">
+    <a routerLink="" > retour</a>
+</div>
+
+<div class="cardContent">
+  <div class="title"> Listes de vos produits </div>
+  <div class="cardProduct">
+    <div *ngFor="let item of products" class="item">
+      <div class="name">
+        <span>nom : </span>
+        <em [ngClass]="item.price > 300 ? 'bigPrice' : '' " boldDirective highlightDirective>{{ item.name }}</em>
+      </div>
+      <div class="price">
+        <span>price : </span>
+        <em> {{ item.price }} $</em>
+      </div>
+    </div>
+  </div>
+</div>
